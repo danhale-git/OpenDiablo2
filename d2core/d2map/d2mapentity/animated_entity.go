@@ -17,7 +17,7 @@ type AnimatedEntity struct {
 // CreateAnimatedEntity creates an instance of AnimatedEntity
 func CreateAnimatedEntity(x, y int, animation d2interface.Animation) *AnimatedEntity {
 	entity := &AnimatedEntity{
-		mapEntity: createMapEntity(x, y),
+		mapEntity: newMapEntity(x, y),
 		animation: animation,
 	}
 	entity.mapEntity.directioner = entity.rotate
